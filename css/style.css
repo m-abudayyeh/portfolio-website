@@ -34,6 +34,7 @@ header{
 @media (min-width: 576px) {
     .container {
       max-width: 540px;
+
     }
   }
   
@@ -415,6 +416,7 @@ footer .copyright{
     .hamberger{
         display: block;
     }
+   
     .hero .left img{
         width:260px;
     }
