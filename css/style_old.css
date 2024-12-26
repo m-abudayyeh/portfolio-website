@@ -23,6 +23,7 @@ html{
 }
 header{
     background: var(--dark);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
 }
 .container{
     max-width:1152px;
@@ -81,9 +82,7 @@ header nav .branding{
 .hero .left img{
     width: 600px;
 }
-.hero .right{
-    color:var(--pure);
-}
+
 .hero .right h6{
     font-size:1.6rem;
     color:var(--primary);

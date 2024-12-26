@@ -1,0 +1,266 @@
+@import 'utilities.css';
+
+:root {
+  --primary: #3DCFD3;
+  --dark: #161616;
+  --pure: #FFFFFF;
+  --ternary: #898989;
+  --light: #F2F2F2;
+  --secondary: #000000;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  background: var(--dark);
+}
+
+.container {
+  max-width: 1152px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+header nav {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--pure);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logo span {
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: var(--pure);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--pure);
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark);
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
+}
+
+.overlay-link {
+  color: var(--pure);
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.overlay-link:hover {
+  color: var(--primary);
+}
+
+.overlay.active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+section{
+    padding:6rem 0;
+}
+section.about .about-me-img{
+    height:450px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size:1.6rem;
+    font-weight:400;
+}
+section.about h1 span{
+    color:var(--primary);
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom:1rem;
+    font-weight: 400;
+}
+
+section.about p{
+    font-family:'Lato', sans-serif;
+    color:var(--ternary);
+    line-height: 1.8;
+    margin-bottom:2rem;}
+
+.section-heading{
+   color:var(--secondary); 
+   text-align: center;
+   margin-bottom:1rem;
+   line-height: 0.5;
+}
+.section-heading span{
+    color:var(--primary);
+}
+.section-heading + p{
+   color:var(--ternary);
+   font-family:'Lato', sans-serif;
+   margin-bottom:8rem;
+    text-align: center;
+}
+
+/* footer style */
+
+.social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    color: var(--secondary);
+  }
+  .footer {
+    background-color: var(--dark);
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+  
+  .logo-footer{
+    text-decoration: none;
+    color: var( --primary);
+    font-weight: 600;
+    font-size: 1.3em;
+    justify-content: flex-end;
+  
+  }
+  .footer-title {
+    font-size: .9em;
+    font-weight: 600;
+   position: relative;
+   top :10px;
+   margin-bottom:  20px; ;
+  }
+  
+  .footer-title span {
+    color: var( --primary);
+  }
+  
+  .footer .social-icons a{
+   color:var( --pure);
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    margin:  10px; 
+  }
+  
+  /* responsive */
+  /* responsive */
+  /* responsive */
+  /* responsive */
+  /* responsive */
+  /* responsive */
+  
+  @media (max-width:576px){
+    
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top:2rem;
+    }
+    .about .right .social{
+        justify-content: center;
+    }
+    section{
+        padding: 4rem 0;
+    }
+    
+    .section-heading + p{
+        margin-bottom: 3rem;
+    }
+
+}
